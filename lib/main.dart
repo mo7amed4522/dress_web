@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, devicetype) => GetMaterialApp(
         debugShowCheckedModeBanner: false,
         translations: MyTranslation(),
+        theme: ThemeData.dark(),
         locale: const Locale('ar'),
         title: 'Dressing'.tr,
         initialBinding: InitialBindings(),

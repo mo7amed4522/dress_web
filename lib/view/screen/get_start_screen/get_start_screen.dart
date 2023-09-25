@@ -30,6 +30,7 @@ class GetStartScreen extends StatelessWidget {
                   'start'.tr,
                   style: GoogleFonts.ibmPlexSansArabic(
                     fontSize: 17.sp,
+                    color: Colors.black,
                   ),
                 ),
               ),
