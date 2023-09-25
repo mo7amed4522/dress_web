@@ -27,7 +27,7 @@ class Header extends StatelessWidget {
             ),
           if (!Responnsive.isMobile(context))
             Text(
-              "Dashboard".tr,
+              controller.titleNames[controller.index],
               style: GoogleFonts.notoKufiArabic(
                 fontSize: 6.sp,
                 color: Color(0xFFFE270D),

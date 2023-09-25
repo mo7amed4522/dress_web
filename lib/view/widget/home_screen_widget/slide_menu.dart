@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:dress_web/controller/home_screen_controller/home_screen_controller.dart';
 import 'package:dress_web/core/constant/app_photo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -13,37 +14,50 @@ class SideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: ListView(
-        children: [
-          DrawerHeader(
-            child: Image.asset(AppPhotoLink.logo),
-          ),
-          DrawerListTile(
-            title: "Dashboard".tr,
-            svgSrc: AppPhotoLink.dashboardIcon,
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "collection".tr,
-            svgSrc: AppPhotoLink.collectionIcon,
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Notification".tr,
-            svgSrc: AppPhotoLink.notifcationIcon,
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "settings".tr,
-            svgSrc: AppPhotoLink.settingIcon,
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Profile".tr,
-            svgSrc: AppPhotoLink.profileIcon,
-            press: () {},
-          ),
-        ],
+      child: GetBuilder<HomeScreenControllerIMP>(
+        init: HomeScreenControllerIMP(),
+        builder: (controller) => ListView(
+          children: [
+            DrawerHeader(
+              child: Image.asset(AppPhotoLink.logo),
+            ),
+            DrawerListTile(
+              title: "Dashboard".tr,
+              svgSrc: AppPhotoLink.dashboardIcon,
+              press: () {
+                controller.chabgeIndex(0);
+              },
+            ),
+            DrawerListTile(
+              title: "collection".tr,
+              svgSrc: AppPhotoLink.collectionIcon,
+              press: () {
+                controller.chabgeIndex(1);
+              },
+            ),
+            DrawerListTile(
+              title: "Notification".tr,
+              svgSrc: AppPhotoLink.notifcationIcon,
+              press: () {
+                controller.chabgeIndex(2);
+              },
+            ),
+            DrawerListTile(
+              title: "settings".tr,
+              svgSrc: AppPhotoLink.settingIcon,
+              press: () {
+                controller.chabgeIndex(3);
+              },
+            ),
+            DrawerListTile(
+              title: "Profile".tr,
+              svgSrc: AppPhotoLink.profileIcon,
+              press: () {
+                controller.chabgeIndex(4);
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -2,7 +2,7 @@
 
 import 'package:dress_web/controller/home_screen_controller/home_screen_controller.dart';
 import 'package:dress_web/core/constant/responseve.dart';
-import 'package:dress_web/view/widget/dashboard_screen_widget/dashboard_screen_widget.dart';
+import 'package:dress_web/view/widget/dashboard_screen_widget/dasboard_screen_widget.dart';
 import 'package:dress_web/view/widget/home_screen_widget/slide_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               Expanded(
                 flex: 5,
-                child: DashboardScreen(),
+                child: DashboardScreenWidget(),
               )
             ],
           ),

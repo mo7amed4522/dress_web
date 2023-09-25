@@ -10,9 +10,7 @@ import 'package:sizer/sizer.dart';
 import 'file_info_card.dart';
 
 class MyFiles extends StatelessWidget {
-  const MyFiles({
-    Key? key,
-  }) : super(key: key);
+  const MyFiles({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -66,11 +64,7 @@ class MyFiles extends StatelessWidget {
 }
 
 class FileInfoCardGridView extends StatelessWidget {
-  const FileInfoCardGridView({
-    Key? key,
-    this.crossAxisCount = 4,
-    this.childAspectRatio = 1,
-  }) : super(key: key);
+  const FileInfoCardGridView({Key? key, this.crossAxisCount = 4, this.childAspectRatio = 1}) : super(key: key);
 
   final int crossAxisCount;
   final double childAspectRatio;
