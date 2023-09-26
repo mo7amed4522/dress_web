@@ -3,7 +3,6 @@ import 'package:dress_web/core/constant/app_photo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 import 'package:sizer/sizer.dart';
 
 class GetStartScreen extends StatelessWidget {
@@ -16,8 +15,8 @@ class GetStartScreen extends StatelessWidget {
         init: GetStartScreenControllerIMP(),
         builder: (controller) => Stack(
           children: [
-            Lottie.asset(
-              AppPhotoLink.loading,
+            Image.asset(
+              AppPhotoLink.logo,
               width: Get.width,
               height: Get.height,
               fit: BoxFit.cover,

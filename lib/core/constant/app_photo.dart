@@ -15,4 +15,6 @@ class AppPhotoLink {
   static const String settingIcon = '$icon/menu_setting.svg';
   static const String collectionIcon = '$icon/menu_store.svg';
   static const String searchIcon = '$icon/Search.svg';
+  static const String productIcon = '$icon/products.svg';
+  static const String uploadIcon = '$icon/upload_photo.svg';
 }

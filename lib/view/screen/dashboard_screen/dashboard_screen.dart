@@ -2,9 +2,9 @@
 
 import 'package:dress_web/controller/dashboard_screen_controller/dashboard_screen_controller.dart';
 import 'package:dress_web/core/constant/responseve.dart';
-import 'package:dress_web/view/widget/dashboard_screen_widget/widget/my_fields.dart';
-import 'package:dress_web/view/widget/dashboard_screen_widget/widget/recent_files.dart';
-import 'package:dress_web/view/widget/dashboard_screen_widget/widget/storage_details.dart';
+import 'package:dress_web/view/widget/dashboard_screen/my_fields.dart';
+import 'package:dress_web/view/widget/dashboard_screen/recent_files.dart';
+import 'package:dress_web/view/widget/dashboard_screen/storage_details.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

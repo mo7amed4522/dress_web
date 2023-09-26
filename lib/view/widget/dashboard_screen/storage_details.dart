@@ -1,9 +1,8 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:dress_web/view/widget/dashboard_screen_widget/widget/chart.dart';
+import 'package:dress_web/view/widget/dashboard_screen_widget/widget/storage_info_card.dart';
 import 'package:flutter/material.dart';
-
-import 'chart.dart';
-import 'storage_info_card.dart';
 
 class StorageDetails extends StatelessWidget {
   const StorageDetails({

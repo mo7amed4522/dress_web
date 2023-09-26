@@ -23,6 +23,16 @@ class MyTranslation implements Translations {
           'Add New': 'اضافه قسم جديد',
           'Product': 'المنتجات',
           'Search': 'البحث',
+          'nameProd': 'الاسم',
+          'department': 'القسم',
+          'codeProd': 'الكود',
+          'amountProd': 'الكميه',
+          'enterDepartment': 'برجاد ادخال اسم القسم',
+          'Addproduct': 'اضافه منتج جديد',
+          'addnewDep': 'يمكنك اضافه قسم جديد املي البيانات التاليه ',
+          'ok': 'حسنا',
+          'cancel': 'الغاء',
+          'choicePhoto': 'اختيار الصوره',
         },
         'en': {
           'Dressing': 'My Dresses',
@@ -44,6 +54,16 @@ class MyTranslation implements Translations {
           'Add New': 'Add New',
           'Product': 'Product',
           'Search': 'Search',
+          'nameProd': 'Name',
+          'codeProd': 'Code',
+          'amountProd': 'Amount',
+          'Addproduct': 'Add new product',
+          'addnewDep': 'Add new Department !',
+          'enterDepartment': 'Enter new department',
+          'department': 'Department',
+          'ok': 'OK',
+          'cancel': "Cancel",
+          'choicePhoto': 'Choice Photo',
         }
       };
 }

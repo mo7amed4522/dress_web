@@ -8,19 +8,21 @@
       "name": "dress_web",
       "request": "launch",
       "type": "dart",
-      "args": ["-d", "chrome", "--web-port", "3000"]
+      "args": ["-d", "chrome", "--web-port", "3000", "--web-renderer", "html"]
     },
     {
       "name": "dress_web (profile mode)",
       "request": "launch",
       "type": "dart",
-      "flutterMode": "profile"
+      "flutterMode": "profile",
+      "args": ["-d", "chrome", "--web-port", "3000", "--web-renderer", "html"]
     },
     {
       "name": "dress_web (release mode)",
       "request": "launch",
       "type": "dart",
-      "flutterMode": "release"
+      "flutterMode": "release",
+      "args": ["-d", "chrome", "--web-port", "3000", "--web-renderer", "html"]
     }
   ]
 }
