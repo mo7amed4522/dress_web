@@ -7,7 +7,6 @@ import 'package:dress_web/core/func/valid_input.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -35,8 +34,9 @@ class LoginScreen extends StatelessWidget {
                         Center(
                           child: Text(
                             'welcom1'.tr,
-                            style: GoogleFonts.notoKufiArabic(
+                            style: TextStyle(
                               color: Colors.white,
+                              fontFamily: haightlightAR,
                               fontSize: 6.sp,
                             ),
                             textAlign: TextAlign.center,
@@ -46,8 +46,9 @@ class LoginScreen extends StatelessWidget {
                         Center(
                           child: Text(
                             'welcom2'.tr,
-                            style: GoogleFonts.notoKufiArabic(
+                            style: TextStyle(
                               color: Colors.white,
+                              fontFamily: haightlightAR,
                               fontSize: 4.sp,
                             ),
                             textAlign: TextAlign.center,

@@ -36,13 +36,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.6
   flutter_svg: ^2.0.7
-  google_fonts: ^6.1.0
   http: ^1.1.0
   shared_preferences: ^2.2.1
   sizer: ^2.0.15
   lottie: ^2.6.0
   fl_chart: ^0.62.0
-  awesome_dialog: ^3.1.0
+  file_picker: ^5.5.0
 
 dev_dependencies:
   flutter_test:
@@ -82,17 +81,20 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+  fonts:
+    - family: body
+      fonts:
+        - asset: assets/Fonts/body.ttf
+          weight: 600
+    - family: Highliets
+      fonts:
+        - asset: assets/Fonts/Highliets.ttf
+          weight: 700
+    - family: Lateef
+      fonts:
+        - asset: assets/Fonts/Lateef-Bold.ttf
+        - asset: assets/Fonts/Lateef-Regular.ttf
+          weight: 600
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

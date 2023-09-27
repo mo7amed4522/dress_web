@@ -5,7 +5,7 @@ class MyTranslation implements Translations {
   Map<String, Map<String, String>> get keys => {
         'ar': {
           'Dressing': 'My Dresses',
-          'start': 'مرحبا بك في My Dresses',
+          'start': 'مرحبا بك في',
           'welcom1': 'مرحبا بك في My Dresses',
           'welcom2': 'مرحبا بك في لوحه التحكم الخاصه بالمتجر ادخلي البيانات للاستمرار ',
           'not valid E-Mail': 'البريد الالكتروني غير صالح',
@@ -25,7 +25,9 @@ class MyTranslation implements Translations {
           'Search': 'البحث',
           'nameProd': 'الاسم',
           'department': 'القسم',
+          'noDepartmenetEdit': 'نآسف ان لا يوجد قسم هنا يمكنك التعديل عليه !!',
           'codeProd': 'الكود',
+          'departmentnotempity': 'لا يمكن القسم ان يكون فارغ',
           'amountProd': 'الكميه',
           'enterDepartment': 'برجاد ادخال اسم القسم',
           'Addproduct': 'اضافه منتج جديد',
@@ -33,6 +35,7 @@ class MyTranslation implements Translations {
           'ok': 'حسنا',
           'cancel': 'الغاء',
           'choicePhoto': 'اختيار الصوره',
+          'addnewDepartment': 'اضافه قسم جديد',
         },
         'en': {
           'Dressing': 'My Dresses',
@@ -62,8 +65,11 @@ class MyTranslation implements Translations {
           'enterDepartment': 'Enter new department',
           'department': 'Department',
           'ok': 'OK',
+          'noDepartmenetEdit': "No department here !!, You can edit VERY SORRY !!",
           'cancel': "Cancel",
+          'departmentnotempity': "Department not empity",
           'choicePhoto': 'Choice Photo',
+          'addnewDepartment': 'Add new department',
         }
       };
 }

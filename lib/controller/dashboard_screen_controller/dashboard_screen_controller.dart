@@ -1,15 +1,18 @@
-// ignore_for_file: prefer_final_fields, non_constant_identifier_names, unused_field
+// ignore_for_file: prefer_final_fields, non_constant_identifier_names, unused_field, no_leading_underscores_for_local_identifiers
 
 import 'package:dress_web/core/constant/curd.dart';
 import 'package:dress_web/core/constant/link_api.dart';
 import 'package:dress_web/core/constant/loader.dart';
+import 'package:dress_web/core/routes/app_router.dart';
 import 'package:dress_web/model/department_model.dart';
 import 'package:dress_web/model/get_all_product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class DsahboardScreebController extends GetxController {
-  void addNewDepartmentTap();
+  void goToTestScreen();
+  void goToMakeNewDepartment();
+  void goToEditDepartmentScreen(int index);
 }
 
 class DsahboardScreebControllerIMP extends DsahboardScreebController {
@@ -66,5 +69,19 @@ class DsahboardScreebControllerIMP extends DsahboardScreebController {
   }
 
   @override
-  void addNewDepartmentTap() {}
+  void goToTestScreen() {
+    Get.toNamed(AppRouter.testHomePage);
+  }
+
+  @override
+  void goToMakeNewDepartment() {
+    Get.toNamed(AppRouter.makeNewDepartmentScreen);
+  }
+
+  @override
+  void goToEditDepartmentScreen(int index) {
+    Get.toNamed(AppRouter.editDepartmentScreen, arguments: {
+      'DepartmentDat': dataDepartmentModel![index],
+    });
+  }
 }

@@ -1,9 +1,19 @@
-// ignore_for_file: must_be_immutable, prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: must_be_immutable, prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_typing_uninitialized_variables, avoid_web_libraries_in_flutter
+
+import 'dart:io';
+import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
+
+File? imgDepartment;
+Uint8List webImage = Uint8List(8);
+var webImageView;
+String haightlightEng = 'Highliets';
+String bodyEng = 'body';
+String haightlightAR = 'Lateef-Bold';
+String bodyAR = 'Lateef-Regular';
 
 class CustomTextFormFild extends StatelessWidget {
   final String? hintText;
@@ -26,8 +36,9 @@ class CustomTextFormFild extends StatelessWidget {
         keyboardType: textInputType,
         obscureText: isShowText == null || isShowText == false ? false : true,
         validator: validator,
-        style: GoogleFonts.notoKufiArabic(
+        style: TextStyle(
           fontSize: 4.sp,
+          fontFamily: haightlightAR,
         ),
         controller: mycontroller,
         decoration: InputDecoration(
@@ -54,7 +65,7 @@ class CustomTextFormFild extends StatelessWidget {
 class ButtomLoginWidget extends StatelessWidget {
   const ButtomLoginWidget({super.key, required this.ontap, required this.buttonName});
 
-  final VoidCallback ontap;
+  final Function() ontap;
   final String buttonName;
 
   @override
@@ -73,9 +84,10 @@ class ButtomLoginWidget extends StatelessWidget {
         child: Text(
           buttonName,
           textAlign: TextAlign.center,
-          style: GoogleFonts.notoKufiArabic(
+          style: TextStyle(
             fontSize: 4.sp,
             color: Colors.white,
+            fontFamily: haightlightAR,
           ),
         ),
       ),

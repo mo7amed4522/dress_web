@@ -2,11 +2,11 @@
 
 import 'package:dress_web/controller/dashboard_screen_controller/dashboard_screen_controller.dart';
 import 'package:dress_web/core/constant/app_photo.dart';
+import 'package:dress_web/core/constant/companent.dart';
 import 'package:dress_web/core/constant/responseve.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 class RecentFiles extends StatelessWidget {
@@ -30,7 +30,8 @@ class RecentFiles extends StatelessWidget {
               children: [
                 Text(
                   "Product".tr,
-                  style: GoogleFonts.notoKufiArabic(
+                  style: TextStyle(
+                    fontFamily: haightlightAR,
                     color: Color(0xFFFE270D),
                     fontSize: 5.sp,
                   ),
@@ -47,8 +48,9 @@ class RecentFiles extends StatelessWidget {
                   icon: Icon(Icons.add),
                   label: Text(
                     "Addproduct".tr,
-                    style: GoogleFonts.notoKufiArabic(
+                    style: TextStyle(
                       color: Color(0xFFFE270D),
+                      fontFamily: haightlightAR,
                       fontSize: 3.sp,
                     ),
                   ),

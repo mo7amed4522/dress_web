@@ -1,4 +1,4 @@
-// ignore_for_file: depend_on_referenced_packages
+// ignore_for_file: depend_on_referenced_packages, avoid_web_libraries_in_flutter
 
 import 'dart:convert';
 
@@ -38,6 +38,28 @@ class Crud {
     } catch (e) {
       if (kDebugMode) {
         print("Error Catch $e");
+      }
+    }
+  }
+
+  postRequestWithImage(String url, Map data, Uint8List? file, String field, String name) async {
+    var request = http.MultipartRequest("POST", Uri.parse(url))..files.add(http.MultipartFile.fromBytes(field, file!, filename: name));
+    if (kDebugMode) {
+      print(request.files.toString());
+    }
+
+    data.forEach((key, value) {
+      request.fields[key] = value;
+    });
+    var myrequest = await request.send();
+
+    if (myrequest.statusCode == 200) {
+      if (kDebugMode) {
+        print('Image uploaded successfully');
+      }
+    } else {
+      if (kDebugMode) {
+        print('Image upload failed with status code ${myrequest.statusCode}');
       }
     }
   }

@@ -2,10 +2,10 @@
 
 import 'package:dress_web/controller/home_screen_controller/home_screen_controller.dart';
 import 'package:dress_web/core/constant/app_photo.dart';
+import 'package:dress_web/core/constant/companent.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 class SideMenu extends StatelessWidget {
@@ -87,9 +87,10 @@ class DrawerListTile extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: GoogleFonts.notoKufiArabic(
+        style: TextStyle(
           color: Colors.white54,
           fontSize: 4.sp,
+          fontFamily: haightlightAR,
         ),
       ),
     );

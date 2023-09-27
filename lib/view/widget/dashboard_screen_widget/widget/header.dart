@@ -2,11 +2,11 @@
 
 import 'package:dress_web/controller/home_screen_controller/home_screen_controller.dart';
 import 'package:dress_web/core/constant/app_photo.dart';
+import 'package:dress_web/core/constant/companent.dart';
 import 'package:dress_web/core/constant/responseve.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 class Header extends StatelessWidget {
@@ -28,8 +28,9 @@ class Header extends StatelessWidget {
           if (!Responnsive.isMobile(context))
             Text(
               controller.titleNames[controller.index],
-              style: GoogleFonts.notoKufiArabic(
+              style: TextStyle(
                 fontSize: 6.sp,
+                fontFamily: haightlightAR,
                 color: Color(0xFFFE270D),
               ),
             ),
