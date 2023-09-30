@@ -1,8 +1,5 @@
 // ignore_for_file: prefer_final_fields, no_leading_underscores_for_local_identifiers
 
-import 'package:dress_web/core/constant/companent.dart';
-import 'package:dress_web/core/constant/curd.dart';
-import 'package:dress_web/core/constant/link_api.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +11,6 @@ abstract class TestScreenController extends GetxController {
 }
 
 class TestScreenControllerIMP extends TestScreenController {
-  Crud _crud = Crud();
   late TextEditingController nameDepartmentController;
   String name = '';
 
@@ -30,16 +26,7 @@ class TestScreenControllerIMP extends TestScreenController {
     super.dispose();
   }
 
-  addNewDepartmentTap() async {
-    await _crud.postRequestWithImage(
-        ApiLink.addDepartmentURL,
-        {
-          'dep_name': nameDepartmentController.text,
-        },
-        webImage,
-        'dep_photo',
-        name);
-  }
+  addNewDepartmentTap() async {}
 
   Future<void> pickedImage() async {
     if (!kIsWeb) {
@@ -66,7 +53,7 @@ class TestScreenControllerIMP extends TestScreenController {
           print(file.name);
         }
         // normal file
-        webImage = result.files.single.bytes!;
+//        webImage = result.files.single.bytes!;
         //you have set state to change file ;
       } else {
         // remove the picker

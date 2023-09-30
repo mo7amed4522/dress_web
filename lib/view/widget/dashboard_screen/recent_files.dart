@@ -4,6 +4,7 @@ import 'package:dress_web/controller/dashboard_screen_controller/dashboard_scree
 import 'package:dress_web/core/constant/app_photo.dart';
 import 'package:dress_web/core/constant/companent.dart';
 import 'package:dress_web/core/constant/responseve.dart';
+import 'package:dress_web/view/widget/dashboard_screen/alter_dialog_show_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -59,7 +60,13 @@ class RecentFiles extends StatelessWidget {
             ),
             controller.daaAllProductModle == null
                 ? Center(
-                    child: CircularProgressIndicator(),
+                    child: Text(
+                      'No Product'.tr,
+                      style: TextStyle(
+                        fontSize: 10.sp,
+                        fontFamily: haightlightAR,
+                      ),
+                    ),
                   )
                 : SizedBox(
                     width: double.infinity,
@@ -83,7 +90,7 @@ class RecentFiles extends StatelessWidget {
                           nameProd: controller.daaAllProductModle![index].name!,
                           codeProd: controller.daaAllProductModle![index].prodId!.toString(),
                           amountProd: controller.daaAllProductModle![index].amount!.toString(),
-                          onCellTap: () {},
+                          onCellTap: AlterWidgetDialog().addAlaretWidgetProduct,
                         ),
                       ),
                     ),

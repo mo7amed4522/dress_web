@@ -3,6 +3,7 @@
 import 'package:dress_web/controller/dashboard_screen_controller/dashboard_screen_controller.dart';
 import 'package:dress_web/core/constant/companent.dart';
 import 'package:dress_web/core/constant/responseve.dart';
+import 'package:dress_web/view/widget/dashboard_screen/alter_dialog_show_widget.dart';
 import 'package:dress_web/view/widget/dashboard_screen_widget/widget/file_info_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,45 +15,41 @@ class MyFiles extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size _size = MediaQuery.of(context).size;
-    GlobalKey<FormState> formState = GlobalKey();
     return GetBuilder<DsahboardScreebControllerIMP>(
       init: DsahboardScreebControllerIMP(),
       builder: (controller) => Column(
         children: [
-          Form(
-            key: formState,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "My Files".tr,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "My Files".tr,
+                style: TextStyle(
+                  color: Color(0xFFFE270D),
+                  fontFamily: haightlightAR,
+                  fontSize: 3.sp,
+                ),
+              ),
+              ElevatedButton.icon(
+                style: TextButton.styleFrom(
+                  iconColor: Color(0xFFFE270D),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 16 * 1.5,
+                    vertical: 16 / (Responnsive.isMobile(context) ? 2 : 1),
+                  ),
+                ),
+                onPressed: AlterWidgetDialog().showAlterDialogAdd,
+                icon: Icon(Icons.add),
+                label: Text(
+                  "Add New".tr,
                   style: TextStyle(
-                    color: Color(0xFFFE270D),
                     fontFamily: haightlightAR,
+                    color: Color(0xFFFE270D),
                     fontSize: 3.sp,
                   ),
                 ),
-                ElevatedButton.icon(
-                  style: TextButton.styleFrom(
-                    iconColor: Color(0xFFFE270D),
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 16 * 1.5,
-                      vertical: 16 / (Responnsive.isMobile(context) ? 2 : 1),
-                    ),
-                  ),
-                  onPressed: controller.goToMakeNewDepartment,
-                  icon: Icon(Icons.add),
-                  label: Text(
-                    "Add New".tr,
-                    style: TextStyle(
-                      fontFamily: haightlightAR,
-                      color: Color(0xFFFE270D),
-                      fontSize: 3.sp,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
           SizedBox(height: 16),
           Responnsive(
@@ -96,8 +93,14 @@ class FileInfoCardGridView extends StatelessWidget {
                 childAspectRatio: childAspectRatio,
               ),
               itemBuilder: (context, index) => FileInfoCard(
-                onEditPress: () {
-                  controller.goToEditDepartmentScreen(index);
+                onDoubleTap: () {
+                  controller.getDataDepartmentEdit(index).then((value) {
+                    controller.nameEditDepartmentController.text = value.depName!;
+                    return AlterWidgetDialog().showAlterDialogEdit(
+                      imgeURL: value.depPhoto!,
+                      nameController: controller.nameEditDepartmentController,
+                    );
+                  });
                 },
                 onDepTap: () {
                   controller.getAllproductData(controller.dataDepartmentModel![index].depId!);

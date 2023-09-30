@@ -1,15 +1,9 @@
 // ignore_for_file: must_be_immutable, prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_typing_uninitialized_variables, avoid_web_libraries_in_flutter
 
-import 'dart:io';
-import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
-File? imgDepartment;
-Uint8List webImage = Uint8List(8);
-var webImageView;
 String haightlightEng = 'Highliets';
 String bodyEng = 'body';
 String haightlightAR = 'Lateef-Bold';
@@ -22,16 +16,30 @@ class CustomTextFormFild extends StatelessWidget {
   final TextEditingController? mycontroller;
   final String? Function(String?) validator;
   final TextInputType? textInputType;
+  int? maxLength = 1;
   bool? enabled = true;
   final bool? isShowText;
   final void Function()? sufficsIconTap;
-  CustomTextFormFild({super.key, this.sufficsIconTap, this.isShowText, this.textInputType, required this.validator, this.mycontroller, this.hintText, this.lable, this.suffixIcon, this.enabled});
+  CustomTextFormFild({
+    super.key,
+    this.sufficsIconTap,
+    this.isShowText,
+    this.textInputType,
+    required this.validator,
+    this.mycontroller,
+    this.hintText,
+    this.maxLength,
+    this.lable,
+    this.suffixIcon,
+    this.enabled,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 20, left: 4, right: 4),
       child: TextFormField(
+        maxLines: maxLength,
         enabled: enabled,
         keyboardType: textInputType,
         obscureText: isShowText == null || isShowText == false ? false : true,

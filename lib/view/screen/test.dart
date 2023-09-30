@@ -5,7 +5,6 @@ import 'package:dress_web/core/constant/app_photo.dart';
 import 'package:dress_web/core/constant/companent.dart';
 import 'package:dress_web/view/widget/dashboard_screen/cirecle_avatar_widget.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
@@ -35,14 +34,7 @@ class TestHomePage extends StatelessWidget {
               SizedBox(height: 2.h),
               GetBuilder<TestScreenControllerIMP>(
                 init: TestScreenControllerIMP(),
-                builder: (con) => CircleAvatarWidget(
-                  onCameraTap: con.onCameraTap,
-                  backgroundImage: imgDepartment == null
-                      ? Image.asset(AppPhotoLink.noUserProfile)
-                      : kIsWeb
-                          ? Image.memory(webImage, fit: BoxFit.fill)
-                          : Center(),
-                ),
+                builder: (con) => CircleAvatarWidget(onCameraTap: con.onCameraTap, backgroundImage: Image.asset(AppPhotoLink.noUserProfile)),
               ),
               SizedBox(height: 2.h),
               CustomTextFormFild(

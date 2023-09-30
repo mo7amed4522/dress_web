@@ -1,5 +1,7 @@
 class ApiLink {
   static const String baseURL = 'http://localhost:8000';
+  //====================== CONCOLUATION URL =========================//
+  static const String getConcoluationURL = '$baseURL/getConcluction.php';
   //====================== DEPARTMENT URL =========================//
   static const String viewDepartmentURL = '$baseURL/department/viewDepartment.php';
   static const String addDepartmentURL = '$baseURL/department/addNewDepartment.php';

@@ -2,6 +2,7 @@
 
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Chart extends StatelessWidget {
   const Chart({Key? key}) : super(key: key);
@@ -26,14 +27,13 @@ class Chart extends StatelessWidget {
               children: [
                 SizedBox(height: 16),
                 Text(
-                  "29.1",
+                  "char".tr,
                   style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
                         height: 0.5,
                       ),
                 ),
-                Text("of 128GB")
               ],
             ),
           ),
